@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import Head from "next/head";
 import styles from "../styles/home.module.scss";
-=======
-import styles from "../styles/home.module.scss";
-import Head from "next/head";
->>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
 
 import Image from "next/image";
 import techsImage from "../../public/images/techs.svg";
@@ -27,16 +22,12 @@ export default function Home() {
               <button>COMEÇAR AGORA!</button>
             </a>
           </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
           <img
             src="/images/banner-conteudos.png"
             alt="Conteúdos Sujeito Programador"
           />
         </div>
-<<<<<<< HEAD
         <hr className={styles.divisor} />
 
         <div className={styles.sectionContent}>
@@ -83,8 +74,6 @@ export default function Home() {
             <button>ACESSAR TURMA!</button>
           </a>
         </div>
-=======
->>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
       </main>
     </>
   );
