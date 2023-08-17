@@ -1,10 +1,18 @@
 .container{
+<<<<<<< HEAD
     display: block;    
+=======
+    display: block;
+>>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
 }
 
 .containerHeader{
     min-height: calc(100vh - 5rem);
+<<<<<<< HEAD
     margin: 0 auto;
+=======
+    margin: 0 auto; //auto para centralizar
+>>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
     max-width: 1120px;
 
     display: flex;
@@ -13,12 +21,19 @@
 
     img{
         max-width: 640px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
     }
 }
 
 .ctaText{
+<<<<<<< HEAD
     max-width: 600px;;
+=======
+    max-width: 600px;
+>>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
 
     h1{
         font-size: 3.5rem;
@@ -43,6 +58,7 @@
         color: var(--white);
         font-weight: bold;
     }
+<<<<<<< HEAD
 }
 
 .divisor{
@@ -120,4 +136,6 @@
         color: var(--white);
         font-weight: bold;
     }
+=======
+>>>>>>> 265971e9cea129d41b88d6c7226d8e954605f82c
 }
