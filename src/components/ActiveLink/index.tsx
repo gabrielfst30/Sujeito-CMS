@@ -12,7 +12,8 @@ interface ActiveLinkProps extends LinkProps{
 export function ActiveLink({ children, activeClassName, ...rest }: ActiveLinkProps){
     const { asPath } = useRouter();
 
-    //se a rota/pagina que estamos acessando for igual ao link clicado, então ativamos a classname
+    //se a rota/pagina que estamos acessando for igual ao link clicado, então ativamos a classname 
+    //e o link ficará com a cor de ativo
     const className = asPath === rest.href ? activeClassName : '';
     
     
