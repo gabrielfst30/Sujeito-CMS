@@ -4,24 +4,44 @@ import styles from "./post.module.scss";
 import { getPrismicClient } from "@/services/prismic";
 import { RichText } from "prismic-dom";
 
-interface PostProps{
-    post:{
-        slug: string;
-        title: string;
-        description: string;
-        cover: string;
-        updatedAt: string;
-    }
+import Head from "next/head";
+import Image from "next/image";
+
+//tipagem do post
+interface PostProps {
+  post: {
+    slug: string;
+    title: string;
+    description: string;
+    cover: string;
+    updatedAt: string;
+  }
 }
 
-export default function Post({ post }: PostProps ){
-
-console.log(post)
-
+export default function Post({ post }: PostProps) {
   return (
-    <div>
-      <h1>DETALHE DO POST</h1>
-    </div>
+    <>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+      <main className={styles.container}>
+        <article className={styles.post}>
+          <Image
+            quality={100}
+            src={post.cover}
+            width={720}
+            height={410}
+            alt={post.title}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0cQ2sBwAC6gFTXnYA8wAAAABJRU5ErkJggg=="
+          />
+          <h1>{post.title}</h1>
+          <time>{post.updatedAt}</time>
+          {/* dangerous seta um html dentro da div */}
+          <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: post.description }}></div>
+        </article>
+      </main>
+    </>
   );
 }
 
@@ -68,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   return {
     props: {
-        post
+      post
     },
   };
 };
